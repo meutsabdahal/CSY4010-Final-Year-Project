@@ -12,5 +12,10 @@
 		'title' => $title,
 		'content' => $content
 	];
+
+
 	$html = loadTemplate('templates/layout.php', $tempVars);
+	
+
+
 ?>
