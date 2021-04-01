@@ -18,7 +18,7 @@
                 ?>
                 <tr>
                     <td><?php echo $slideshow['images'];?></td>
-                    <td><a href="category?cId=<?php echo $category['categoryId']?>"><button>DELETE</button></td>
+                    <td><a href="slideshow?sId=<?php echo $slideshow['slideshowId']?>"><button>Delete</button></td>
                 </tr>
             <?php }
             ?>

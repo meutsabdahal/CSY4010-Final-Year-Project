@@ -7,15 +7,14 @@
         header('Location:admin');   
     }
 
-
-    // else{
-    //     if (isset($_GET['cId'])) {
-    //         $admin = $admin->find('adminId',$_GET['cId']);
-    //         $admin = $admin->fetch();
-    //     }
-    //     else
-    //         $category = false;
-    // }
+    else{
+        if (isset($_GET['aId'])) {
+            $admin = $admin->find('adminId',$_GET['aId']);
+            $admin = $admin->fetch();
+        }
+        else
+            $category = false;
+    }
 
     $title = "MeKart";
 

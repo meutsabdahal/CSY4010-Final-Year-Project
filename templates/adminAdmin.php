@@ -24,8 +24,8 @@
                     <td><?php echo $admin['lastName'];?></td>
                     <td><?php echo $admin['email'];?></td>
                     <td><?php echo $admin['phone'];?></td>
-                    <td><button>Edit</button>
-                    <button>Delete</button></td>
+                    <td><a href="manageAdmin?aId=<?php echo $admin['adminId']?>"><button>Edit</button></a>
+                    <a href="admin?aId=<?php echo $admin['adminId']?>"><button>Delete</button></td>
                 </tr>
             <?php }
             ?>

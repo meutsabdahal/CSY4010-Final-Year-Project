@@ -14,20 +14,29 @@
         <center>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-80" src="slideshow/<?php echo $slideshows['matchPicture'] ?>" alt="">
+                <img class="d-block w-80" src="img/1.jpg" alt="">
             </div>
+            <?php
+                foreach($slideshows as $slideshow){
+                    ?>
+                    <div class="carousel-item">
+                        <img src="slideshow/<?php echo $slideshow['images'];?>" alt="">
+                    </div>
+                <?php
+                    }
+                ?>
             
-            </div>
+        </div>
 
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="" aria-hidden="true"><img role="img" src="svg/previous.svg"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="" aria-hidden="true"><img role="img" src="svg/next.svg"></span>
-                <span class="sr-only">Next</span>
-            </a>
-            </center>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="" aria-hidden="true"><img role="img" src="svg/previous.svg"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="" aria-hidden="true"><img role="img" src="svg/next.svg"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        </center>
     </div>
 
     <h4 class="mt-4 ml-5 font-italic">Top Deals</h4>

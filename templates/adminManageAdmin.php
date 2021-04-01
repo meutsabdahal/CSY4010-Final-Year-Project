@@ -7,22 +7,22 @@
 <center>
 
 <form action="" method="post" class="mt-3">
-    <input type="hidden" name="admin[adminId]">
+    <input type="hidden" name="admin[adminId]" value="<?php if(isset($admin['adminId'])) echo $admin['adminId'];?>">
     
     <label for="">First Name</label><br>
-    <input type="text" name="admin[firstName]"><br>
+    <input type="text" name="admin[firstName]" value="<?php if(isset($admin['firstName'])) echo $admin['firstName'];?>" ><br>
 
     <label for="">Last Name</label><br>
-    <input type="text" name="admin[lastName]"><br>
+    <input type="text" name="admin[lastName]" value="<?php if(isset($admin['lastName'])) echo $admin['lastName'];?>" ><br>
 
     <label for="">Email</label><br>
-    <input type="email" name="admin[email]"><br>
+    <input type="email" name="admin[email]" value="<?php if(isset($admin['email'])) echo $admin['email'];?>" ><br>
 
     <label for="">Password</label><br>
-    <input type="password" name="admin[password]"><br>
+    <input type="password" name="admin[password]" value="<?php if(isset($admin['password'])) echo $admin['password'];?>" ><br>
 
     <label for="">Phone Number</label><br>
-    <input type="number" name="admin[phone]"><br>
+    <input type="number" name="admin[phone]" value="<?php if(isset($admin['phone'])) echo $admin['phone'];?>" ><br>
 
     <input type="submit" name ="submit" value="Save" class="submit mt-3">
 </form>

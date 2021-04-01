@@ -1,5 +1,10 @@
 <?php
 
+    
+    if(isset($_GET['sId'])){
+        $slideshows = $slideshow->delete('slideshowId',$_GET['sId']);	
+    }
+
     $slideshows = $slideshow->findAll();
 
     $title = "MeKart";

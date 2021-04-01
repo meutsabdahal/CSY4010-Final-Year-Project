@@ -12,4 +12,6 @@
 	$customer = new DatabaseTable('customer');
 	$admin = new DatabaseTable('admin');
 	$slideshow = new DatabaseTable('slideshow');
+	$vendor = new DatabaseTable('vendor');
+	$order = new DatabaseTable('productOrder');
     ?>

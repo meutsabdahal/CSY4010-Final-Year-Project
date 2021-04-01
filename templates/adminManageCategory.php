@@ -7,7 +7,7 @@
 <center>
 
 <form action="" method="post" class="mt-3">
-    <input type="hidden" name="category[categoryId]" value="<?php if(isset($category['categoryName'])) echo $category['categoryName'];?>" >
+    <input type="hidden" name="category[categoryId]" value="<?php if(isset($category['categoryId'])) echo $category['categoryId'];?>" >
 
     <label for="">Category Name</label><br>
     <input type="text" name="category[categoryName]" value="<?php if(isset($category['categoryName'])) echo $category['categoryName'];?>" required><br>
