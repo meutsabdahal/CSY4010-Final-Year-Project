@@ -74,6 +74,16 @@
             return $stmt;
         }
 
+        function updateStatus($field, $field2, $value2){
+            global $pdo;
+            $stmt = $pdo->prepare("UPDATE $this->table SET $field = 1 WHERE $field2 = :value2");
+            $criteria = [
+                "value2" => $value2 
+            ];
+            $stmt->execute($criteria);
+            return $stmt;
+        }
+
 
 
     }

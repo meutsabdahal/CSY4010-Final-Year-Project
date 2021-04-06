@@ -22,9 +22,9 @@
                 <tr>
                     <td><?php echo $vendor['vendorName'];?></td>
                     <td><?php echo $vendor['email'];?></td>
-                    <td><?php echo $vendor['password'];?></td>
+                    <td><?php echo $vendor['phoneNumber'];?></td>
                     <td><?php echo $vendor['province'];?></td>
-                    <a href="vendor?vId=<?php echo $vendor['vendorId']?>"><button>Delete</button></td>
+                    <td><a href="vendor?vId=<?php echo $vendor['vendorId']?>"><button>Delete</button></td>
                 </tr>
             <?php }
             ?>

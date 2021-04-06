@@ -11,6 +11,7 @@
             <th scope="col">Email</th>
             <th scope="col">Phone Number</th>
             <th scope="col">City</th>
+            <th scope="col">Proposal</th>
             <th scope="col">Handle</th>
         </tr>
     </thead>
@@ -22,8 +23,12 @@
                     <td><?php echo $vendor['vendorName'];?></td>
                     <td><?php echo $vendor['email'];?></td>
                     <td><?php echo $vendor['phoneNumber'];?></td>
-                    <td><?php echo $vendor['province'];?></td>
-                   <td><a href=""><button>Approve</button></td>
+                    <td><?php echo $vendor['city'];?></td>
+                    <td><a href="<?php echo '../proposal/'.$vendor['proposal'];?>" target="_blank">View </a></td>
+                   <td><form method="post">
+                        <input type="hidden" name="vendorId" value="<?php echo $vendor['vendorId'];?>">
+                        <button name="submit">Approve</button>
+                   </form></td>
                 </tr>
             <?php }
             ?>
