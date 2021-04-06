@@ -9,14 +9,16 @@
 
     <!-- creating a customer login form in box container -->
     <div class="login-container shadow bg-white mt-1">
-        <label class="font-italic login-register-label">Email Address</label><br>
-        <input type="text" name="email"  class="input-type"><br>
+        <form action="" method="post">
+            <label class="font-italic login-register-label">Email Address</label><br>
+            <input type="text" name="email"  class="input-type"><br>
 
-        <label class="font-italic mt-4 login-register-label">Password</label><br>
-        <input type="password" name="password"  class="input-type"><br>
-        
-        <a href=""><p class="bg-white float-right mt-2 text-dark">Forgot Password?</p></a>
-        <a href="login"><button type="button" class="float-right default-button mt-4">Log In</button></a>
+            <label class="font-italic mt-4 login-register-label">Password</label><br>
+            <input type="password" name="password"  class="input-type"><br>
+            
+            <a href=""><p class="bg-white float-right mt-2 text-dark">Forgot Password?</p></a>
+            <input type="submit" name="submit" value="Log In" class="float-right default-button mt-4">
+        </form>
     </div>
 
     <!-- creating a horizontal line with text in-between -->

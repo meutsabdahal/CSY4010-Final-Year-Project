@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+
     $slideshows = $slideshow->findAll();
     $categories = $category->findAll();
     $title = "MeKart";

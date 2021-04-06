@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $categories = $category->findAll();
     $title = "MeKart";
 

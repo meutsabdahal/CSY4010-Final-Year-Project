@@ -1,8 +1,14 @@
 <?php
-    $categories = $category->findAll();
+    
+    if (isset($_SESSION['sessCustomerId'])) {
+        $categories = $category->findAll();
 
-    $title = "MeKart";
+        $title = "MeKart";
+    
+        $content = loadTemplate("templates/cartTemplate.php", ['categories' => $categories]);
+    
+    }
 
-    $content = loadTemplate("templates/cartTemplate.php", ['categories' => $categories]);
-
+    else
+        include 'logIn.php'
 ?>

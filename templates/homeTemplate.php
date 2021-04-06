@@ -1,6 +1,9 @@
 <?php
-    require 'header.php';
-
+    if (isset($_SESSION['sessCustomerId'])) {
+        include 'loggedInHeader.php';
+    }
+    else
+        include 'header.php';
 ?>
 
 
