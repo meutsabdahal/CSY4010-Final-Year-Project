@@ -1,4 +1,5 @@
 <?php
+    $categories = $category->findAll();
     if (isset($_POST['submit'])) {
 
         $proposal = $_FILES['proposal']['name'];
@@ -14,6 +15,6 @@
 
     $title = "MeKart";
 
-    $content = loadTemplate("templates/vendorRegistrationTemplate.php", []);
+    $content = loadTemplate("templates/vendorRegistrationTemplate.php", ['categories' => $categories]);
 
 ?>

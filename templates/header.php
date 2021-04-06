@@ -27,16 +27,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home & LifeStyle</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home & LifeStyle</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home & LifeStyle</a>
-                </li>
-                    
+                <?php
+                    foreach ($categories as $category) {
+                       ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><?php echo $category['categoryName'];?></a>
+                        </li>
+                    <?php   
+                    }
+                ?>
             </ul>
         </div>
     </nav>  

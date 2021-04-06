@@ -1,5 +1,5 @@
 <?php
-    
+    $categories = $category->findAll();
     if (isset($_POST['submit'])) {
         $password = $_POST['customer']['password'];
 		$pass = password_hash($password,PASSWORD_DEFAULT);
@@ -13,6 +13,6 @@
 
 
     $title = "MeKart";
-    $content = loadTemplate("templates/registerTemplate.php", ['customer' => $customer]);
+    $content = loadTemplate("templates/registerTemplate.php", ['customer' => $customer, 'categories' => $categories]);
 
 ?>
