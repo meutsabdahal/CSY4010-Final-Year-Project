@@ -11,7 +11,7 @@
         <div class="col-sm text-center mt-3 ml-5">
             <div class="dashboard-box shadow bg-white mt-5">
                 <h4>Category</h4><br>
-                6  
+                <?php echo $categories[0]; ?>  
             </div>    
         </div>
         </a>
@@ -20,7 +20,7 @@
         <div class="col-sm text-center mt-3 ml-5">
             <div class="dashboard-box shadow bg-white mt-5">
                 <h4>Product</h4><br>
-                6  
+                <?php echo $products[0]; ?>
             </div>    
         </div>
         </a>
@@ -38,7 +38,7 @@
         <div class="col-sm text-center mt-3 ml-5">
             <div class="dashboard-box shadow bg-white mt-5">
                 <h4>Admin</h4><br>
-                6  
+                <?php echo $admins[0]; ?> 
             </div>    
         </div>
         </a>
@@ -46,8 +46,8 @@
         <a href="">
         <div class="col-sm text-center mt-3 ml-5">
             <div class="dashboard-box shadow bg-white mt-5">
-                <h4>Staff</h4><br>
-                6  
+                <h4>Customer</h4><br>
+                <?php echo $customers[0]; ?> 
             </div>    
         </div>
         </a>

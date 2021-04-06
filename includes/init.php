@@ -14,4 +14,5 @@
 	$slideshow = new DatabaseTable('slideshow');
 	$vendor = new DatabaseTable('vendor');
 	$order = new DatabaseTable('productOrder');
+	$product = new DatabaseTable('product');
     ?>

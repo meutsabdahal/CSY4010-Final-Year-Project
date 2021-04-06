@@ -67,6 +67,12 @@
             return $stmt;
         }
 
+        function countRow(){
+            global $pdo;
+            $stmt = $pdo->prepare("SELECT COUNT(*) FROM $this->table");
+            $stmt->execute();
+            return $stmt;
+        }
 
 
 
