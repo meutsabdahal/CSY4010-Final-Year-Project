@@ -7,10 +7,9 @@
 }
 
 .adminNav{
-    background-color: #676767;
-    color:#FFFFFF;
+    background-color: #FFFFFF;
     width: 10%;
-    min-height: 90%;
+    min-height: 750px;
 }
 
 ul{

@@ -21,9 +21,9 @@
                 <tr>
                     <td><?php echo $vendor['vendorName'];?></td>
                     <td><?php echo $vendor['email'];?></td>
-                    <td><?php echo $vendor['password'];?></td>
+                    <td><?php echo $vendor['phoneNumber'];?></td>
                     <td><?php echo $vendor['province'];?></td>
-                    <a href=""><button>Approve</button></td>
+                   <td><a href=""><button>Approve</button></td>
                 </tr>
             <?php }
             ?>

@@ -1,8 +1,6 @@
 <?php
 
-
-
-    $vendors = $vendor->findAll();
+    $vendors = $vendor->find('status', 0);
 
     $title = "MeKart";
 

@@ -4,7 +4,7 @@
 ?>
 
 <section>
-    <h1 class="text-center mt-4 font-italic">Register your Account</h1>
+    <h1 class="text-center mt-3 font-italic">Register your Account</h1>
     <center>
     <!-- creating a customer regsiter form in box container -->
     <div class="login-container shadow bg-white mt-1">

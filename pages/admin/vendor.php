@@ -4,7 +4,7 @@
         $vendors = $vendor->delete('vendorId',$_GET['aId']);	
     }
 
-    $vendors = $vendor->findAll();
+    $vendors = $vendor->find('status', 1);
 
     $title = "MeKart";
 

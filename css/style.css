@@ -72,6 +72,7 @@ nav{
 }
 section{
     background-color: #F5F5F5;
+    min-height: auto;
     /* margin-top: -; */
 }
 .login-container{

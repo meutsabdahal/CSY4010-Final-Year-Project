@@ -4,12 +4,13 @@
 ?>
 
 <section>
-    <h1 class="text-center mt-4 font-italic">Register for Vendorship</h1>
+    <h1 class="text-center mt-3 font-italic">Register for Vendorship</h1>
     <center>
     <!-- creating a vendor regsiter form in box container -->
     <div class="login-container shadow bg-white mt-1">
-        <form action="" method="post"  enctype="multipart/form-data">
+        <form action="" method="post" enctype="multipart/form-data" class="mt-3">
             <input type="hidden" name="vendorId">
+            
             <label class="font-italic mt-4 login-register-label">Company Name</label><br>
             <input type="text" name="vendorName"  class="input-type"><br>
 
@@ -43,7 +44,8 @@
             <input type="text" name="street"  class="input-type"><br>
 
             <label class="font-italic mt-4 login-register-label">Proposal</label><br>
-            <input type="file" name="proposal" ><br>
+            <input type="file" name="proposal"><br>
+            
             
             <input type="submit" name="submit" value="Request" class="default-button mt-4">
         </form>
