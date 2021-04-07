@@ -31,6 +31,17 @@
             return $stmt;
         }
 
+        function findValue($field, $value, $field2, $value2){
+            global $pdo;
+            $stmt = $pdo->prepare("SELECT * FROM $this->table WHERE $field =:value AND $field2 =:value2");
+            $criteria = [
+                "value" => $value,
+                "value2" => $value2
+            ];
+            $stmt->execute($criteria);
+            return $stmt;
+        }
+
         function insert($record){
             global $pdo;
             $keys = array_keys($record);

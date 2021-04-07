@@ -42,13 +42,19 @@
         <label class="font-italic mt-4 login-register-label">Street</label>
         <input type="text" name="lastName"  class="input-type ml-5"><br>
 
-        <h4 class="font-italic">Summary</h4>
+        <label class="font-italic mt-4 login-register-label">Payment Type</label>
+        <select name="province" class="input-type ml-5">
+            <option value="">-- Choose Payment Option --</option>
+            <option value="">Cash on Delivery</option>
+        </select><br>
+
+        <h4 class="font-italic mt-3">Summary</h4>
         <p class="">SubTotal: <b>Rs.200 </b></p>
         <label class="font-italic login-register-label">Enter Voucher Code</label><br>
         <input type="text" name="voucherCode" class="input-type">
         <button class="default-button">Apply</button><br>
         <p class="">Total: <b>Rs.200 </b></p>
-        <a href="paymentOption"><button class="default-button mt-4">Proceed to Payment</button></a>
+        <a href="paymentOption"><button class="default-button mt-4">Confirm</button></a>
 
 
     </div>

@@ -1,5 +1,5 @@
 <?php
-	require 'adminLayout.php';
+	require 'vendorHeader.php';
 ?>
 
 

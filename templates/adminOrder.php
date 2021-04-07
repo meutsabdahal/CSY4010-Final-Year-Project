@@ -9,6 +9,8 @@
         <tr>
             <th scope="col">Order Id</th>
             <th scope="col">Product Name</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Phone Number</th>
             <th scope="col">Vendor Name</th>
             <th scope="col">Address</th>
             <th scope="col">Handle</th>
