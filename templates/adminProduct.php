@@ -4,7 +4,6 @@
 
 
 <h1 class="text-center mt-1 font-italic">Product</h1>
-<a href="manageProduct"><button class="ml-5 mb-4 adminButton">Add Product</button></a>
 <table class="table  table-hover">
     <thead>
         <tr>

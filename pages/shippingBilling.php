@@ -1,6 +1,8 @@
 <?php
     // if (isset($_SESSION['sessCustomerId'])) {
-
+        
+        // available from:
+        // https://www.youtube.com/watch?v=3kzBJSUVsa4
         if(isset($_POST['submit'])){
             $to = $_POST['email'];
             $subject = 'Order Conformation';

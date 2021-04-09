@@ -24,7 +24,7 @@
                     <td><?php echo $vendor['email'];?></td>
                     <td><?php echo $vendor['phoneNumber'];?></td>
                     <td><?php echo $vendor['province'];?></td>
-                    <td><a href="vendor?vId=<?php echo $vendor['vendorId']?>"><button>Delete</button></td>
+                    <td><a href="vendor?vId=<?php echo $vendor['vendorId']?>"><button>Delete</button></a></td>
                 </tr>
             <?php }
             ?>

@@ -20,15 +20,18 @@
             foreach ($vendors as $vendor){
                 ?>
                 <tr>
+                <form method="post">
                     <td><?php echo $vendor['vendorName'];?></td>
                     <td><?php echo $vendor['email'];?></td>
                     <td><?php echo $vendor['phoneNumber'];?></td>
                     <td><?php echo $vendor['city'];?></td>
                     <td><a href="<?php echo '../proposal/'.$vendor['proposal'];?>" target="_blank">View </a></td>
-                   <td><form method="post">
+                   <td>
                         <input type="hidden" name="vendorId" value="<?php echo $vendor['vendorId'];?>">
+                        <input type="hidden" name="email" value="<?php echo $vendor['email'];?>">
                         <button name="submit">Approve</button>
-                   </form></td>
+                  </td>
+                  </form>
                 </tr>
             <?php }
             ?>
