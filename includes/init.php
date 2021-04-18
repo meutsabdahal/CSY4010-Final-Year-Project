@@ -16,4 +16,5 @@
 	$vendor = new DatabaseTable('vendor');
 	$order = new DatabaseTable('productOrder');
 	$product = new DatabaseTable('product');
+	$review = new DatabaseTable('review');
     ?>

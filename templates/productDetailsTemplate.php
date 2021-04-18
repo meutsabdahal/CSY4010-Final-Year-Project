@@ -1,6 +1,6 @@
 <?php
     require 'header.php';
-
+    $customerId = $_SESSION['sessCustomerId'];
 ?>
 
 <section>
@@ -51,24 +51,21 @@
                 }
             ?>
     </div>
-
-
+    
+    
     <div>
-        <h3 class="ml-5 mt-4 font-italic">Ratings and Reviews</h3>
-        <img src="svg/rating.svg" class="ml-5">
-        <img src="svg/rating.svg" class="ml-2">
-        <img src="svg/rating.svg" class="ml-2">
-        <img src="svg/rating.svg" class="ml-2">
-        <img src="svg/rating.svg" class="ml-2">
         <h3 class="ml-5 mt-4 font-italic">Reviews</h3>
+        <form action="" method="post" class="mt-5">
+                <input type="hidden" name="reviewId">
+                <input type="text" name="review" class="ml-5">
+                <input type="hidden" name="productId" value="<?php echo $product['productId']; ?>">
+                <input type="hidden" name="customerId" value="<?php echo $customerId; ?>">
+                <input type="submit" name="submit" value="Add" class="default-button">
+
+        </form>
     </div>
 
     <div class="review-container shadow bg-white mt-3">
-        <img src="svg/rating.svg">
-        <img src="svg/rating.svg">
-        <img src="svg/rating.svg">
-        <img src="svg/rating.svg">
-        <img src="svg/rating.svg">
         Customer Name
         <div class="review-box mt-2">
             <center> Review of the Product</center>
@@ -76,12 +73,7 @@
     </div>
 
         
-    <div class="review-container shadow bg-white mt-3">
-        <img src="svg/rating.svg">
-        <img src="svg/rating.svg">
-        <img src="svg/rating.svg">
-        <img src="svg/rating.svg">
-        <img src="svg/rating.svg">
+    <div class="review-container shadow bg-white mt-3"> 
         Customer Name
         <div class="review-box mt-2">
             <center> Review of the Product</center>
