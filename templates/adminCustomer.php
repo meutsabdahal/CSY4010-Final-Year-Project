@@ -11,7 +11,7 @@
             <th scope="col">Last Name</th>
             <th scope="col">Email</th>
             <th scope="col">Phone Number</th>
-            <th scope="col">Handle</th>
+            <!-- <th scope="col">Handle</th> -->
         </tr>
     </thead>
     <tbody>
@@ -23,7 +23,7 @@
                     <td><?php echo $customer['lastName'];?></td>
                     <td><?php echo $customer['email'];?></td>
                     <td><?php echo $customer['phoneNumber'];?></td>
-                    <td><button>Delete</button></td>
+                    <!-- <td><button>Delete</button></td> -->
                 </tr>
             <?php }
             ?>

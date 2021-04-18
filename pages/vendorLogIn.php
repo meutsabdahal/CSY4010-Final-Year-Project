@@ -1,9 +1,9 @@
 <?php
-    session_start();
+
     if (isset($_POST['submit'])) {
         unset($_POST['submit']);
 
-        $vendors = $vendor->findValue('email', $_POST['email'], 'status', 1);
+        $vendors = $vendor->find('email', $_POST['email']);
         if ($vendors->rowCount() > 0) {
             $vendor = $vendors->fetch();
 
@@ -21,6 +21,7 @@
         
 
     }
+
 
     $categories = $category->findAll();
     $title = "MeKart";

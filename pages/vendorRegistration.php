@@ -12,6 +12,7 @@
         move_uploaded_file($tempPicture, 'proposal/'.$proposal);
         $_POST['proposal'] = $proposal;
         $vendor->insert($_POST);
+        header('Location:vendorLogIn');
     
         }
     

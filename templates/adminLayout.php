@@ -1,5 +1,7 @@
 <header class="text-center adminHeader">
-     MeKart
+    MeKart
+
+    <button class="float-right adminButton">Sign Out</button>
 </header>
 <div class="adminNav mt-1 float-left">
     <nav>

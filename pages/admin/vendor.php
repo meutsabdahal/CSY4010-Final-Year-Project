@@ -1,7 +1,7 @@
 <?php
 
     if(isset($_GET['vId'])){
-        $vendors = $vendor->delete('vendorId',$_GET['aId']);	
+        $vendors = $vendor->delete('vendorId',$_GET['vId']);	
     }
 
     $vendors = $vendor->find('status', 1);

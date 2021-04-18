@@ -9,7 +9,7 @@
 
             if (password_verify($_POST['password'], $customer['password'])) {
                 $_SESSION['sessCustomerId'] = $customer['customerId'];
-                header('Location:loggedIn');
+                header('Location:home');
             }
         }
             else

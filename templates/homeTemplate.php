@@ -46,7 +46,7 @@
 
     <div class="container-product">
         <div class="row">
-            <a href="product">
+            <a href="productDetails">
             <div class="col-sm text-center mt-3">
                 <div class="product-container mt-1">
                     <center><img src="img/shoe.jpg" class="product-view-img"><br></center>

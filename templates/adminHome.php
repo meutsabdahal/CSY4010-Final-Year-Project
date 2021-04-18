@@ -7,7 +7,7 @@
 <h1 class="text-center mt-1 font-italic">Dashboard</h1>
 <div class="container-product">
     <div class="row">
-        <a href="">
+        <a href="category">
         <div class="col-sm text-center mt-3 ml-5">
             <div class="dashboard-box shadow bg-white mt-5">
                 <h4>Category</h4><br>
@@ -16,7 +16,7 @@
         </div>
         </a>
 
-        <a href="">
+        <a href="product">
         <div class="col-sm text-center mt-3 ml-5">
             <div class="dashboard-box shadow bg-white mt-5">
                 <h4>Product</h4><br>
@@ -25,7 +25,7 @@
         </div>
         </a>
 
-        <a href="">
+        <a href="vendor">
         <div class="col-sm text-center mt-3 ml-5">
             <div class="dashboard-box shadow bg-white mt-5">
                 <h4>Vendor</h4><br>
@@ -34,7 +34,7 @@
         </div>
         </a>
 
-        <a href="">
+        <a href="admin">
         <div class="col-sm text-center mt-3 ml-5">
             <div class="dashboard-box shadow bg-white mt-5">
                 <h4>Admin</h4><br>
@@ -43,7 +43,7 @@
         </div>
         </a>
 
-        <a href="">
+        <a href="customer">
         <div class="col-sm text-center mt-3 ml-5">
             <div class="dashboard-box shadow bg-white mt-5">
                 <h4>Customer</h4><br>
