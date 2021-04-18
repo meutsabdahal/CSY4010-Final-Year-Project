@@ -46,17 +46,27 @@
 
     <div class="container-product">
         <div class="row">
-            <a href="productDetails">
-            <div class="col-sm text-center mt-3">
-                <div class="product-container mt-1">
-                    <center><img src="img/shoe.jpg" class="product-view-img"><br></center>
-                    Rs. 150
-                </div>    
-            </div>
-            </a>
+            
+                    <?php
+                        foreach ($products as $product) {
+                        ?>
+                        <a href="productDetails?pId=<?php echo $product['productId']; ?>">
+                        <div class="col-sm text-center mt-3">
+                            <div class="product-container mt-1">
+                                <center><img src="productImages/<?php echo $product['thumnailImage'];?>" class="product-view-img"><br></center>
+                                <?php echo $product['productName'];?><br>
+                                <?php echo $product['price'];?>
+                            </div>
+                        </div>
+                        </a>
+                        <?php
+                        }
+                    ?>
+        
+         
 
             
-            <div class="col-sm text-center mt-3">
+            <!-- <div class="col-sm text-center mt-3">
                 <div class="product-container mt-1">
                     <center><img src="img/shoe.jpg" class="product-view-img"><br></center>
                     Rs. 150
@@ -121,7 +131,7 @@
                     <center><img src="img/shoe.jpg" class="product-view-img"><br></center>
                     Rs. 150
                 </div>  
-            </div>
+            </div> -->
 
         </div>
     </div>
