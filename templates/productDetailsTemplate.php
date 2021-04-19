@@ -1,5 +1,9 @@
 <?php
-    require 'header.php';
+    if (isset($_SESSION['sessCustomerId'])) {
+        include 'loggedInHeader.php';
+    }
+    else
+        include 'header.php';
 ?>
 
 <section>
@@ -58,7 +62,7 @@
                 <input type="hidden" name="reviewId">
                 <input type="text" name="review" class="ml-5">
                 <input type="hidden" name="productId" value="<?php echo $product['productId']; ?>">
-                <!-- <input type="hidden" name="customerId" value="<?php echo $_SESSION['sessCustomerId']; ?>"> -->
+                <input type="hidden" name="customerId" value="<?php echo $_SESSION['sessCustomerId']; ?>">
                 <input type="submit" name="submit" value="Add" class="default-button">
 
         </form>
@@ -70,7 +74,7 @@
             <div class="review-container shadow bg-white mt-3"> 
                 <?php echo $review['firstName'].' '.$review['lastName'];?>
                 <div class="review-box mt-2">
-                    <center> Review of the Product</center>
+                    <center><?php echo $review['review'];?></center>
                 </div>
              </div> 
 
