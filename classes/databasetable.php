@@ -95,6 +95,16 @@
             return $stmt;
         }
 
+        function joinTableCondition($table2,$value,$value2,$field,$value3){
+            global $pdo;
+            $stmt = $pdo->prepare("SELECT $this->table.*, $table2.* FROM $this->table JOIN $table2 ON 
+              $this->table.$value = $table2.$value2 WHERE $field =:value3");
+              $criteria = [
+                "value3" => $value3
+            ];
+            $stmt->execute($criteria);
+            return $stmt;
+        }
 
 
     }

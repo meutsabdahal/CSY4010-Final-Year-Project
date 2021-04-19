@@ -1,6 +1,5 @@
 <?php
     require 'header.php';
-    $customerId = $_SESSION['sessCustomerId'];
 ?>
 
 <section>
@@ -59,13 +58,27 @@
                 <input type="hidden" name="reviewId">
                 <input type="text" name="review" class="ml-5">
                 <input type="hidden" name="productId" value="<?php echo $product['productId']; ?>">
-                <input type="hidden" name="customerId" value="<?php echo $customerId; ?>">
+                <!-- <input type="hidden" name="customerId" value="<?php echo $_SESSION['sessCustomerId']; ?>"> -->
                 <input type="submit" name="submit" value="Add" class="default-button">
 
         </form>
     </div>
 
-    <div class="review-container shadow bg-white mt-3">
+    <?php
+        foreach ($reviews as $review) {
+        ?>
+            <div class="review-container shadow bg-white mt-3"> 
+                <?php echo $review['firstName'].' '.$review['lastName'];?>
+                <div class="review-box mt-2">
+                    <center> Review of the Product</center>
+                </div>
+             </div> 
+
+        <?php
+        }
+    ?>
+
+    <!-- <div class="review-container shadow bg-white mt-3">
         Customer Name
         <div class="review-box mt-2">
             <center> Review of the Product</center>
@@ -78,7 +91,7 @@
         <div class="review-box mt-2">
             <center> Review of the Product</center>
         </div>
-    </div>
+    </div> -->
 </section>
 
 

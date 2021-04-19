@@ -7,18 +7,23 @@
     $allProducts = $product->findAll();
     // $allProducts = $allProducts->fetch();
 
-    if (isset($_SESSION['sessCustomerId'])) {
+    $reviews = $review->joinTableCondition('customer', 'customerId', 'customerId', 'productId', $_GET['pId']);
+
+    
         if (isset($_POST['submit'])) {
             unset($_POST['submit']);
-            $review->insert($_POST);  
-            header('Refresh:0');
-        }
+            if (isset($_SESSION['sessCustomerId'])) {
+                $review->insert($_POST);  
+                header('Refresh:0');
+            }
+            else
+                echo "hello";
     }
-    else
-        echo "hello";
+    
 
     $title = "MeKart";
 
-    $content = loadTemplate("templates/productDetailsTemplate.php", ['categories' => $category, 'products' => $products, 'allProducts' => $allProducts]);
+    $content = loadTemplate("templates/productDetailsTemplate.php", ['categories' => $categories, 'products' => $products, 'allProducts' => $allProducts,
+                                                                        'reviews' => $reviews]);
 
 ?>
