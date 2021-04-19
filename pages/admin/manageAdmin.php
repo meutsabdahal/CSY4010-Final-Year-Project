@@ -13,7 +13,7 @@
             $admin = $admin->fetch();
         }
         else
-            $category = false;
+            $admin = false;
     }
 
     $title = "MeKart";
