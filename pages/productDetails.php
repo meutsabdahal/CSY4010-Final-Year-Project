@@ -10,14 +10,19 @@
     $reviews = $review->joinTableCondition('customer', 'customerId', 'customerId', 'productId', $_GET['pId']);
 
     
-        if (isset($_POST['submit'])) {
-            unset($_POST['submit']);
-            if (isset($_SESSION['sessCustomerId'])) {
-                $review->insert($_POST);  
-                header('Refresh:0');
-            }
-            else
-                echo "hello";
+    if (isset($_POST['submit'])) {
+        unset($_POST['submit']);
+        if (isset($_SESSION['sessCustomerId'])) {
+            $review->insert($_POST);  
+            header('Refresh:0');
+        }
+        else
+            echo "hello";
+    }
+
+    if (isset($_POST['cart'])) {
+        unset($_POST['cart']);
+        $cart->insert($_POST);
     }
     
 

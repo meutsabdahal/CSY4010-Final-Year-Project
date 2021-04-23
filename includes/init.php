@@ -17,4 +17,5 @@
 	$product = new DatabaseTable('product');
 	$review = new DatabaseTable('review');
 	$productorder = new DatabaseTable('productorder');
+	$cart = new DatabaseTable('cart');
     ?>

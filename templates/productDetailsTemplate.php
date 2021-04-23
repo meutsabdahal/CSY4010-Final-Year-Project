@@ -10,7 +10,10 @@
 
     <div class="product-details">
         <div class="ml-5 mt-4 w-50 text-center float-left product-description">
-            <h4 class="font-italic">Product Name</h4>
+        <?php
+            foreach ($products as $product) {
+                ?>
+            <h4 class="font-italic"><?php echo $product['productName'];?></h4>
 
             <!-- social media share link -->
             <div class="mt-2">
@@ -19,9 +22,7 @@
                 <img src="svg/instagram.svg" class="ml-2">
             </div>
             <br>
-            <?php
-                foreach ($products as $product) {
-                ?>
+
             <p>Sold by: <b><a href="vendor?vId=<?php echo $product['vendorId']; ?>">hello</a></b><br>
             <?php echo $product['description'];?>
             </p>
@@ -43,7 +44,12 @@
             <br>
             <?php echo $product['keyword'];?>
             <a href="shippingBilling?pId=<?php echo $product['productId']; ?>"><button type="button" class="product-button">Buy</button></a>
-            <a href="cart"><button type="button" class="product-button">Add to Cart</button></a>
+            <form action="" method="post">
+            <input type="text" name="cartId">
+            <input type="text" name="productId" value="<?php echo $product['productId'] ?>">
+            <input type="text" name="customerId" value=<?php echo $_SESSION['sessCustomerId']?>>
+            <a href="cart"><button type="submit" name="cart" class="product-button">Add to Cart</button></a>
+            </form>
         </div>
 
         <div class=" mt-4 ml-5">
