@@ -95,6 +95,16 @@
             return $stmt;
         }
 
+        function updateValues($field, $val, $field2, $value2){
+            global $pdo;
+            $stmt = $pdo->prepare("UPDATE $this->table SET $field = $val WHERE $field2 = :value2");
+            $criteria = [
+                "value2" => $value2 
+            ];
+            $stmt->execute($criteria);
+            return $stmt;
+        }
+
         function joinTableCondition($table2,$value,$value2,$field,$value3){
             global $pdo;
             $stmt = $pdo->prepare("SELECT $this->table.*, $table2.* FROM $this->table JOIN $table2 ON 
@@ -103,6 +113,16 @@
                 "value3" => $value3
             ];
             $stmt->execute($criteria);
+            return $stmt;
+        }
+
+        function joinThreeTable($table2,$value, $value2, $table3, $value3 , $value4){
+            global $pdo;
+            $stmt = $pdo->prepare("SELECT $this->table.*, $table2.*, $table3.* FROM $this->table JOIN $table2 ON 
+                $this->table.$value = $table2.$value2 JOIN $table3 ON $table2.$value3 = $table3.$value4");
+
+                
+            $stmt->execute();
             return $stmt;
         }
 
