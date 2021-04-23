@@ -43,7 +43,7 @@
             ?>
             <br>
             <?php echo $product['keyword'];?>
-            <a href=<?php echo $link; ?>><button type="button" class="product-button">Buy</button></a>
+            <a href="shippingBilling?pId=<?php echo $product['productId']; ?>"><button type="button" class="product-button">Buy</button></a>
             <a href="cart"><button type="button" class="product-button">Add to Cart</button></a>
         </div>
 

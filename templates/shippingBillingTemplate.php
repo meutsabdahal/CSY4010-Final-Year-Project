@@ -5,15 +5,21 @@
 
 <section>
     <div class="cart-listing mt-2 ml-5">
-        <img src="img/shoe.jpg" class="product-view-img ml-3 cart-product-img">
-        <p class="cart-product-name ml-4">Adidas White Sneakers for Men/Women Adidas White Sneakers for Men/Women </p> 
-        <p class="mt-4 mr-5 float-right">Rs. 150 </p>
+
+        <img src="productImages/<?php echo $products['thumnailImage'];?>" class="product-view-img ml-3 cart-product-img">
+        <p class="cart-product-name ml-4"><?php echo $products['productName'];?> </p> 
+        <p class="mt-4 mr-5 float-right">Rs. <?php echo $products['price'];?></p>
     </div>    
     <h3 class="text-center mt-4 font-italic">Shipping and Billing</h3>
 
     <center>
     <div class="login-container shadow bg-white mt-1">
         <form action="" method="post">
+            <input type="hidden" name="orderId">
+            <input type="hidden" name ="productId" value="<?php echo $products['productId']; ?>">
+            <input type="hidden" name ="vendorId" value="<?php echo $products['vendorId']; ?>">
+            <input type="hidden" name="customerId" value="<?php echo $_SESSION['sessCustomerId']; ?>">
+
             <label class="font-italic login-register-label">First Name</label>
             <input type="text" name="firstName"  class="input-type ml-5"><br>
 
@@ -38,19 +44,21 @@
             </select><br>
 
             <label class="font-italic mt-4 login-register-label">City</label>
-            <input type="text" name="lastName"  class="input-type ml-5"><br>
+            <input type="text" name="city"  class="input-type ml-5"><br>
 
             <label class="font-italic mt-4 login-register-label">Street</label>
-            <input type="text" name="lastName"  class="input-type ml-5"><br>
+            <input type="text" name="street"  class="input-type ml-5"><br>
 
             <label class="font-italic mt-4 login-register-label">Payment Type</label>
-            <select name="province" class="input-type ml-5">
+            <select name="paymentType" class="input-type ml-5">
                 <option value="">-- Choose Payment Option --</option>
-                <option value="">Cash on Delivery</option>
+                <option value="cashOnDelivery">Cash on Delivery</option>
             </select><br>
+            <input type="hidden" name="status">
 
             <h4 class="font-italic mt-3">Summary</h4>
             <p class="">Total: <b>Rs.200 </b></p>
+
             <input type="submit" name="submit" value="Confirm" class="default-button mt-4">
         
         </form>
