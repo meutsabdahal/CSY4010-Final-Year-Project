@@ -22,8 +22,7 @@
             <?php
                 foreach ($products as $product) {
                 ?>
-       
-            <p>Sold by: <b>Seller Name</b><br>
+            <p>Sold by: <b><a href="vendor?vId=<?php echo $product['vendorId']; ?>">hello</a></b><br>
             <?php echo $product['description'];?>
             </p>
 
