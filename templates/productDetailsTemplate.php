@@ -45,9 +45,15 @@
             <?php echo $product['keyword'];?>
             <a href="shippingBilling?pId=<?php echo $product['productId']; ?>"><button type="button" class="product-button">Buy</button></a>
             <form action="" method="post">
-            <input type="text" name="cartId">
-            <input type="text" name="productId" value="<?php echo $product['productId'] ?>">
-            <input type="text" name="customerId" value=<?php echo $_SESSION['sessCustomerId']?>>
+            <input type="hidden" name="cartId">
+            <input type="hidden" name="productId" value="<?php echo $product['productId']; ?>">
+            <?php
+            if (isset($_SESSION['sessCustomerId'])) {
+                ?>
+                <input type="hidden" name="customerId" value="<?php echo $_SESSION['sessCustomerId']?>">
+                <?php
+            }
+            ?>
             <a href="cart"><button type="submit" name="cart" class="product-button">Add to Cart</button></a>
             </form>
         </div>
@@ -64,11 +70,17 @@
     <div>
         <h3 class="ml-5 mt-4 font-italic">Reviews</h3>
         <form action="" method="post" class="mt-5">
-                <input type="hidden" name="reviewId">
-                <input type="text" name="review" class="ml-5">
-                <input type="hidden" name="productId" value="<?php echo $product['productId']; ?>">
-                <input type="hidden" name="customerId" value="<?php echo $_SESSION['sessCustomerId']; ?>">
-                <input type="submit" name="submit" value="Add" class="default-button">
+            <input type="hidden" name="reviewId">
+            <input type="text" name="review" class="ml-5">
+            <input type="hidden" name="productId" value="<?php echo $product['productId']; ?>">
+            <?php
+                if (isset($_SESSION['sessCustomerId'])) {
+                    ?>
+                    <input type="hidden" name="customerId" value="<?php echo $_SESSION['sessCustomerId']?>">
+                    <?php
+                }
+                ?>
+            <input type="submit" name="submit" value="Add" class="default-button">
 
         </form>
     </div>

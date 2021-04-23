@@ -31,7 +31,7 @@
                     foreach ($categories as $category) {
                        ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><?php echo $category['categoryName'];?></a>
+                            <a class="nav-link" href="productByCategory?cId=<?php echo $category['categoryId']; ?>"><?php echo $category['categoryName'];?></a>
                         </li>
                     <?php   
                     }
