@@ -8,31 +8,27 @@
     <thead>
         <tr>
             <th scope="col">Product Name</th>
-            <th scope="col">Category Name</th>
             <th scope="col">Price</th>
+            <th scope="col">Keywords</th>
+            <th scope="col">Vendor</th>
             <th scope="col">Handle</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-        </tr>
+    <tbody>
+        <?php
+        foreach ($products as $product){
+                ?>
+                <tr>
+                    <td><?php echo $product['productName'];?></td>
+                    <td><?php echo $product['price'];?></td>
+                    <td><?php echo $product['keyword'];?></td>
+                    <td><?php echo $product['vendorName'];?></td>
+                    <a href="product?pId=<?php echo $product['productId']?>"><button>DELETE</button>
+                </tr>
+            <?php }
+            ?>
 
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-        </tr>
+    </tbody>
     </tbody>
 </table>

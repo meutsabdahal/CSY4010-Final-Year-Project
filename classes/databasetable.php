@@ -126,6 +126,15 @@
             return $stmt;
         }
 
+        function joinTable($table2,$value,$value2){
+            global $pdo;
+            $stmt = $pdo->prepare("SELECT $this->table.*, $table2.* FROM $this->table JOIN $table2 ON 
+            $this->table.$value = $table2.$value2");
+            $stmt->execute();
+            return $stmt;
+        }
+
+        
         function joinThreeTable($table2,$value, $value2, $table3, $value3 , $value4){
             global $pdo;
             $stmt = $pdo->prepare("SELECT $this->table.*, $table2.*, $table3.* FROM $this->table JOIN $table2 ON 
