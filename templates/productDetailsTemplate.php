@@ -7,7 +7,6 @@
 ?>
 
 <section>
-
     <div class="product-details">
         <div class="ml-5 mt-4 w-50 text-center float-left product-description">
         <?php
@@ -30,20 +29,25 @@
             <p><b class="mr-5">Rs. <?php echo $product['price'];?></b>
             Quantity<input type="number" name="quantity" value="1"  min="1" class="ml-3 quantity-input">
             </p>
-            <?php
-                foreach ($allProducts as $allProduct) {
-                    if ($allProduct['keyword'] == $product['keyword']) {
-                        if ($product['price'] > $allProduct['price']) {
-                            $link="hey";
-                        }
-                        else
-                            $link="shippingBilling";
-                    }
-                }                
-            ?>
             <br>
             <?php echo $product['keyword'];?>
-            <a href="shippingBilling?pId=<?php echo $product['productId']; ?>"><button type="button" class="product-button">Buy</button></a>
+            <a href="shippingBilling?pId=<?php echo $product['productId']; ?>"></a>
+            <button onclick="recommendation()" type="button" class="product-button" id="myBtn">Buy</button>
+
+            <!-- Available from: -->
+            <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal -->
+            
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <!-- <span class="close">&times;</span> -->
+                    <p>Some text in the Modal..</p>
+                    <span><button type="button" class="no" data-dismiss="modal">Close</button></span>
+                </div>
+
+            </div>
+
+
             <form action="" method="post">
             <input type="hidden" name="cartId">
             <input type="hidden" name="productId" value="<?php echo $product['productId']; ?>">
@@ -65,7 +69,6 @@
                 }
             ?>
     </div>
-    
     
     <div>
         <h3 class="ml-5 mt-4 font-italic">Reviews</h3>
@@ -99,20 +102,58 @@
         }
     ?>
 
-    <!-- <div class="review-container shadow bg-white mt-3">
-        Customer Name
-        <div class="review-box mt-2">
-            <center> Review of the Product</center>
-        </div>
-    </div>
+    
 
-        
-    <div class="review-container shadow bg-white mt-3"> 
-        Customer Name
-        <div class="review-box mt-2">
-            <center> Review of the Product</center>
-        </div>
-    </div> -->
+
+
+    <script>
+        // Available From:
+        // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal
+
+        function recommendation(){
+            <?php
+                foreach ($allProducts as $allProduct) {
+                    if ($allProduct['keyword'] == $product['keyword']) {
+                        if ($product['price'] > $allProduct['price']) {
+                            ?>
+                            // Get the modal
+                             var modal = document.getElementById("myModal");
+
+                            // Get the button that opens the modal
+                            var btn = document.getElementById("myBtn");
+
+                            // Get the <span> element that closes the modal
+                            var span = document.getElementsByClassName("no")[0];
+
+                            // When the user clicks the button, open the modal 
+                            btn.onclick = function() {
+                            modal.style.display = "block";
+                            }
+
+                            // When the user clicks on <span> (x), close the modal
+                            span.onclick = function() {
+                            modal.style.display = "none";
+                            }
+
+                            // When the user clicks anywhere outside of the modal, close it
+                            window.onclick = function(event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                            }
+                            <?php
+                        }
+                        else{
+                            ?>
+                            location.href = 'shippingBilling?pId=<?php echo $product['productId']; ?>'
+                            <?php
+                        }
+                    }
+                }                
+            ?>
+
+        }
+    </script>
 </section>
 
 
