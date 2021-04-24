@@ -59,7 +59,7 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <!-- <span class="close">&times;</span> -->
-                    <p>Some text in the Modal..</p>
+                    <p>The same product is available at lower price</p>
                     <span><button type="button" class="no" data-dismiss="modal">Close</button></span>
                 </div>
 
@@ -69,13 +69,6 @@
             <form action="" method="post">
             <input type="hidden" name="cartId">
             <input type="hidden" name="productId" value="<?php echo $product['productId']; ?>">
-            <?php
-            if (isset($_SESSION['sessCustomerId'])) {
-                ?>
-                <input type="hidden" name="customerId" value="<?php echo $_SESSION['sessCustomerId']?>">
-                <?php
-            }
-            ?>
             <a href="cart"><button type="submit" name="cart" class="product-button">Add to Cart</button></a>
             </form>
         </div>
@@ -101,6 +94,7 @@
                     <?php
                 }
                 ?>
+            <input type="hidden" name="vendorId" value="<?php echo $product['vendorId']; ?>">
             <input type="submit" name="submit" value="Add" class="default-button">
 
         </form>

@@ -7,17 +7,19 @@
     <center>
 
     <form action="" method="post" enctype="multipart/form-data" class="mt-3">
-        <input type="hidden" name="productId">
+        <input type="hidden" name="product[productId]" value="<?php if(isset($product['productId'])) echo $product['productId'];?>">
         
         <label for="">Produt Name</label><br>
-        <input type="text" name="productName"><br>
+        <input type="text" name="product[productName]" value="<?php if(isset($product['productName'])) echo $product['productName'];?>"><br>
 
         <label for="">Product Description</label><br>
-        <textarea name="description" id="" cols="30" rows="10"></textarea><br>
+        <textarea name="product[description]" id="" cols="30" rows="10" >
+        <?php if(isset($product['description'])) echo $product['description'];?>
+        </textarea><br>
 
         <label>Category</label>
-        <select name="categoryId" >
-            <option value="">-- Select a Category --</option>
+        <select name="product[categoryId]">
+            <option value="<?php if(isset($product['categoryId'])) echo $product['categoryId'];?>">-- Select a Category --</option>
                 <?php
                 foreach ($categories as $category) {
                     ?>
@@ -32,15 +34,15 @@
         <input type="file" name="productImage"><br>
 
         <label for="">Quantity</label><br>
-        <input type="number" name="quantity"><br>
+        <input type="number" name="product[quantity]" value="<?php if(isset($product['quantity'])) echo $product['quantity'];?>"><br>
 
         <label for="">Price</label><br>
-        <input type="number" name="price"><br>
+        <input type="number" name="product[price]" value="<?php if(isset($product['price'])) echo $product['price'];?>"><br>
 
         <label for="">Keywords</label><br>
-        <input type="text" name="keyword"><br>
+        <input type="text" name="product[keyword]" value="<?php if(isset($product['keyword'])) echo $product['keyword'];?>"><br>
 
-        <input type="hidden" name="vendorId" value="<?php echo $_SESSION['sessVendorId'] ?>">
+        <input type="hidden" name="product[vendorId]" value="<?php echo $_SESSION['sessVendorId'] ?>">
 
         <input type="submit" name ="submit" value="Save" class="submit mt-3">
     </form>

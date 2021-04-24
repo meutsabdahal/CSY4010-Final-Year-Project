@@ -2,6 +2,9 @@
     session_start();
     if (isset($_SESSION['sessVendorId'])) {
 
+        if(isset($_GET['pId'])){
+            $products = $product->delete('productId',$_GET['pId']);	
+        }
         $categories = $category->findAll();
         $products = $product->find('vendorId', $_SESSION['sessVendorId']);
 

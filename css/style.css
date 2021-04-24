@@ -237,3 +237,7 @@ footer{
     border: 1px solid #888;
     width: 50%;
 }
+.product-images{
+    width: 200px;
+    height: 20px;
+}
