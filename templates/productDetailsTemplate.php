@@ -31,16 +31,23 @@
             </p>
             <br>
             <?php
+                $status;
                 foreach ($allProducts as $allProduct) {
                     if ($allProduct['keyword'] == $product['keyword']) {
                         if ($product['price'] > $allProduct['price']) {
-                            echo "Available ";
+                            $status = true;
                         }
                         else{
-                            echo "Not Available ";
+                            $status = false;
                         }
                     }
                 }
+                if($status == true){
+                    echo "Available ";
+                }
+                else
+                    echo "Not Available ";
+                
             ?>
             <a href="shippingBilling?pId=<?php echo $product['productId']; ?>"></a>
             <button onclick="recommendation()" type="button" class="product-button" id="myBtn">Buy</button>
@@ -113,8 +120,6 @@
         }
     ?>
 
-    
-
 
 
     <script>
@@ -123,44 +128,54 @@
 
         function recommendation(){
             <?php
+                $status;
                 foreach ($allProducts as $allProduct) {
                     if ($allProduct['keyword'] == $product['keyword']) {
                         if ($product['price'] > $allProduct['price']) {
-                            ?>
-                            // Get the modal
-                             var modal = document.getElementById("myModal");
-
-                            // Get the button that opens the modal
-                            var btn = document.getElementById("myBtn");
-
-                            // Get the <span> element that closes the modal
-                            var span = document.getElementsByClassName("no")[0];
-
-                            // When the user clicks the button, open the modal 
-                            btn.onclick = function() {
-                            modal.style.display = "block";
-                            }
-
-                            // When the user clicks on <span> (x), close the modal
-                            span.onclick = function() {
-                            modal.style.display = "none";
-                            }
-
-                            // When the user clicks anywhere outside of the modal, close it
-                            window.onclick = function(event) {
-                            if (event.target == modal) {
-                                modal.style.display = "none";
-                            }
-                            }
-                            <?php
+                            $status = true;
                         }
                         else{
-                            ?>
-                            location.href = 'shippingBilling?pId=<?php echo $product['productId']; ?>'
-                            <?php
+                            $status = false;
                         }
+                        
                     }
-                }                
+                }  
+                if($status == true){
+                    ?>
+                    // Get the modal
+                    var modal = document.getElementById("myModal");
+
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("myBtn");
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("no")[0];
+
+                    // When the user clicks the button, open the modal 
+                    btn.onclick = function() {
+                    modal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                    modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                    }
+                    <?php
+                }
+                                
+                else{
+                    ?>
+                    location.href = 'shippingBilling?pId=<?php echo $product['productId']; ?>'
+                    <?php
+                }
+                              
             ?>
 
         }
