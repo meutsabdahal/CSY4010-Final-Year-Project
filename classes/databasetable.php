@@ -105,6 +105,16 @@
             return $stmt;
         }
 
+        function findProducts($field, $value){
+            global $pdo;
+            $stmt = $pdo->prepare("SELECT * FROM $this->table WHERE $field LIKE :value");
+            $criteria = [
+                "value" => $value
+            ];
+            $stmt->execute($criteria);
+            return $stmt;
+        }
+
         function joinTableCondition($table2,$value,$value2,$field,$value3){
             global $pdo;
             $stmt = $pdo->prepare("SELECT $this->table.*, $table2.* FROM $this->table JOIN $table2 ON 

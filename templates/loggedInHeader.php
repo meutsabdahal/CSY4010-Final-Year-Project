@@ -8,8 +8,11 @@
 
     <!-- adding a search bar -->
     <div class="inner-svg mt-1">
-        <input type=text name=search placeholder="Search for Products" class="search-bar ml-5 mt-4">
-        <img role="img" src="svg/search.svg" class="search-svg">
+        <form action="productBySearch" method="post">
+            <input type="text" name="search" placeholder="Search for Products" class="search-bar ml-5 mt-4">
+            <input type="hidden" name="submit" src="svg/search.svg" class="search-svg">
+        <img role="img" src="svg/search.svg" class="search-svg" >
+       </form>
     </div> 
 
     <!-- adding logo to header -->

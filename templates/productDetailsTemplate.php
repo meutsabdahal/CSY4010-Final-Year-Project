@@ -30,7 +30,18 @@
             Quantity<input type="number" name="quantity" value="1"  min="1" class="ml-3 quantity-input">
             </p>
             <br>
-            <?php echo $product['keyword'];?>
+            <?php
+                foreach ($allProducts as $allProduct) {
+                    if ($allProduct['keyword'] == $product['keyword']) {
+                        if ($product['price'] > $allProduct['price']) {
+                            echo "Available ";
+                        }
+                        else{
+                            echo "Not Available ";
+                        }
+                    }
+                }
+            ?>
             <a href="shippingBilling?pId=<?php echo $product['productId']; ?>"></a>
             <button onclick="recommendation()" type="button" class="product-button" id="myBtn">Buy</button>
 
