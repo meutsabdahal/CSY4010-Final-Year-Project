@@ -1,7 +1,7 @@
 <header class="text-center adminHeader">
     MeKart
 
-    <button class="float-right adminButton">Sign Out</button>
+    <a href="logOut"><button class="float-right adminButton">Sign Out</button></a>
 </header>
 <div class="adminNav mt-1 float-left">
     <nav>

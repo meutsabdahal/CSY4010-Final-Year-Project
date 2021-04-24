@@ -1,24 +1,29 @@
 <?php
+    session_start();
+    if (isset($_SESSION['sessAdminId'])) {
 
-
-    if (isset($_POST['submit'])) {
-        $category->save($_POST['category'],'categoryId');
-        $category = $_POST['category'];
-        header('Location:category');   
-    }
-
-
-    else{
-        if (isset($_GET['cId'])) {
-            $category = $category->find('categoryId',$_GET['cId']);
-            $category = $category->fetch();
+        if (isset($_POST['submit'])) {
+            $category->save($_POST['category'],'categoryId');
+            $category = $_POST['category'];
+            header('Location:category');   
         }
-        else
-            $category = false;
+
+
+        else{
+            if (isset($_GET['cId'])) {
+                $category = $category->find('categoryId',$_GET['cId']);
+                $category = $category->fetch();
+            }
+            else
+                $category = false;
+        }
+
+        $title = "MeKart";
+
+        $content = loadTemplate("templates/adminManageCategory.php", ['category' => $category]);
     }
 
-    $title = "MeKart";
-
-    $content = loadTemplate("templates/adminManageCategory.php", ['category' => $category]);
+    else
+        include 'adminLogIn.php';
 
 ?>

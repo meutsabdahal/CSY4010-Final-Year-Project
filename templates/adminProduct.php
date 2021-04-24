@@ -24,7 +24,7 @@
                     <td><?php echo $product['price'];?></td>
                     <td><?php echo $product['keyword'];?></td>
                     <td><?php echo $product['vendorName'];?></td>
-                    <a href="product?pId=<?php echo $product['productId']?>"><button>DELETE</button>
+                    <td><a href="product?pId=<?php echo $product['productId']?>"><button>DELETE</button></td>
                 </tr>
             <?php }
             ?>

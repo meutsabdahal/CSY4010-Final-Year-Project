@@ -7,7 +7,7 @@
 <center>
 
 <form action="" method="post" class="mt-3">
-    <input type="hidden" name="admin[adminId]" value="<?php if(isset($admin['adminId'])) echo $admin['adminId'];?>">
+    <input type="hidden" name="admin[adminId]">
     
     <label for="">First Name</label><br>
     <input type="text" name="admin[firstName]" value="<?php if(isset($admin['firstName'])) echo $admin['firstName'];?>" ><br>
