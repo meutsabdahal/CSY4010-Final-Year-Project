@@ -20,7 +20,7 @@
         foreach ($reviews as $review) {
             ?>
             <div class="review-container shadow bg-white mt-3">
-            Customer Name
+            <?php echo $review['firstName'].' '.$review['lastName'];?>
             <div class="review-box mt-2">
                 <center><?php echo $review['review'];?></center>
             </div>

@@ -5,7 +5,8 @@
     $vendors = $vendor->find('vendorId', $_GET['vId']);
     $vendors = $vendors->fetch();
 
-    $reviews = $review->find('vendorId', $_GET['vId']);
+    // $reviews = $review->find('vendorId', $_GET['vId']);
+    $reviews = $review->joinTableCondition('customer', 'customerId', 'customerId', 'vendorId', $_GET['vId']);
 
     $title = "MeKart";
 
