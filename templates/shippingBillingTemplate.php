@@ -24,19 +24,19 @@
             <input type="hidden" name="customerId" value="<?php echo $_SESSION['sessCustomerId']; ?>">
 
             <label class="font-italic login-register-label">First Name</label>
-            <input type="text" name="firstName"  class="input-type ml-5"><br>
+            <input type="text" name="firstName"  class="input-type ml-5" required><br>
 
             <label class="font-italic mt-4 login-register-label">Last Name</label>
-            <input type="text" name="lastName"  class="input-type ml-5"><br>
+            <input type="text" name="lastName"  class="input-type ml-5" required><br>
 
             <label class="font-italic mt-4 login-register-label">Email Address</label>
-            <input type="email" name="email"  class="input-type ml-5"><br>
+            <input type="email" name="email"  class="input-type ml-5" required><br>
 
             <label class="font-italic mt-4 login-register-label">Phone Number</label>
-            <input type="number" name="phoneNumber"  class="input-type ml-5"><br>
+            <input type="number" name="phoneNumber"  class="input-type ml-5" required><br>
 
             <label class="font-italic mt-4 login-register-label">Province</label>
-            <select name="province" class="input-type ml-5">
+            <select name="province" class="input-type ml-5" required>
                 <option value="province1">Province 1</option>
                 <option value="province2">Province 2</option>
                 <option value="bagmatiProvince">Bagmati Province</option>
@@ -47,20 +47,18 @@
             </select><br>
 
             <label class="font-italic mt-4 login-register-label">City</label>
-            <input type="text" name="city"  class="input-type ml-5"><br>
+            <input type="text" name="city" class="input-type ml-5" required><br>
 
             <label class="font-italic mt-4 login-register-label">Street</label>
-            <input type="text" name="street"  class="input-type ml-5"><br>
+            <input type="text" name="street" class="input-type ml-5" required><br>
 
             <label class="font-italic mt-4 login-register-label">Payment Type</label>
-            <select name="paymentType" class="input-type ml-5">
+            <select name="paymentType" class="input-type ml-5" required>
                 <option value="">-- Choose Payment Option --</option>
                 <option value="cashOnDelivery">Cash on Delivery</option>
             </select><br>
-            <input type="hidden" name="status">
+            <input type="hidden" name="orderStatus">
 
-            <h4 class="font-italic mt-3">Summary</h4>
-            <p class="">Total: <b>Rs.200 </b></p>
 
             <input type="submit" name="submit" value="Confirm" class="default-button mt-4">
         

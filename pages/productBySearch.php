@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $categories = $category->findAll();
 
     if (isset($_POST['submit'])) {

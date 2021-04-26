@@ -1,6 +1,6 @@
 <?php
     session_start();
-    // if (isset($_SESSION['sessCustomerId'])) {
+    if (isset($_SESSION['sessCustomerId'])) {
         
         // available from:
         // https://www.youtube.com/watch?v=3kzBJSUVsa4
@@ -27,6 +27,7 @@
             mail($toVendor, $subjectVendor, $messageVendor);
 
             $productorder->insert($_POST);
+            header("Location:orderConfirmation");
             
 
         }
@@ -38,7 +39,7 @@
         $title = "MeKart";
 
         $content = loadTemplate("templates/shippingBillingTemplate.php", ['categories' => $categories, 'products' => $products]);
-    // }
-    // else
-    //     include 'logIn.php';
+    }
+    else
+        include 'logIn.php';
 ?>
