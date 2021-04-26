@@ -13,7 +13,7 @@
     <thead>
         <tr>
             <th scope="col">Product Name</th>
-            <th scope="col">Quantity</th>
+            <th scope="col">Category Name</th>
             <th scope="col">Price</th>
             <th scope="col">Handle</th>
         </tr>
@@ -24,10 +24,10 @@
                 ?>
                 <tr>
                     <td><?php echo $product['productName'];?></td>
+                    <td><?php echo $product['categoryName'];?></td>
                     <td><?php echo $product['price'];?></td>
-                    <td><?php echo $product['quantity'];?></td>
                     <td><a href="vendorHome?pId=<?php echo $product['productId']?>"><button>DELETE</button>
-                    <a href="manageProduct?pId=<?php echo $product['productId']?>"><button>Edit</button></a>
+                    <a href="editProduct?pId=<?php echo $product['productId']?>"><button>Edit</button></a>
                     </td>
                 </tr>
             <?php }

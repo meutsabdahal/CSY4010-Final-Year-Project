@@ -7,18 +7,18 @@
     <center>
 
     <form action="" method="post" enctype="multipart/form-data" class="mt-3">
-        <input type="hidden" name="productId" >
+        <input type="hidden" name="productId" value="<?php echo $products['productId'];?>">
         
         <label for="">Produt Name</label><br>
-        <input type="text" name="productName"><br>
+        <input type="text" name="productName" value="<?php echo $products['productName'];?>"><br>
 
         <label for="">Product Description</label><br>
         <textarea name="description" id="" cols="30" rows="10" >
+        <?php echo $products['description'];?>
         </textarea><br>
 
         <label>Category</label>
         <select name="categoryId">
-            <option>-- Select a Category --</option>
                 <?php
                 foreach ($categories as $category) {
                     ?>
@@ -26,18 +26,11 @@
                     <?php } ?>
         </select><br>
 
-        <label for="">Thumbnail Image</label>
-        <input type="file" name="thumnailImage"><br>
-
-        <label for="">Product Image</label>
-        <input type="file" name="productImage"><br>
-
-
         <label for="">Price</label><br>
-        <input type="number" name="price"><br>
+        <input type="number" name="price" value="<?php echo $products['price'];?>"><br>
 
         <label for="">Keywords</label><br>
-        <input type="text" name="keyword"><br>
+        <input type="text" name="keyword" value="<?php echo $products['keyword'];?>"><br>
 
         <input type="hidden" name="vendorId" value="<?php echo $_SESSION['sessVendorId'] ?>">
 

@@ -1,9 +1,9 @@
 <?php
     session_start();
-    if (isset($_SESSION['sessCustomerId'])) {
         $categories = $category->findAll();
 
-        $products = $product->find('productId', $_GET['pId']);
+        // $products = $product->find('productId', $_GET['pId']);
+        $products = $product->joinTableCondition('vendor', 'vendorId', 'vendorId', 'productId', $_GET['pId']);
         
         $allProducts = $product->findAll();
         // $allProducts = $allProducts->fetch();
@@ -30,10 +30,6 @@
         $title = "MeKart";
 
         $content = loadTemplate("templates/productDetailsTemplate.php", ['categories' => $categories, 'products' => $products, 'allProducts' => $allProducts,
-                                                                            'reviews' => $reviews]);
-    }
-    else
-        include 'logIn.php';
-                                                                            
+                                                                            'reviews' => $reviews]);                                           
 
 ?>

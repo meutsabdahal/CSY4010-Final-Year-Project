@@ -22,7 +22,7 @@
             </div>
             <br>
 
-            <p>Sold by: <b><a href="vendor?vId=<?php echo $product['vendorId']; ?>">hello</a></b><br>
+            <p>Sold by: <b><a href="vendor?vId=<?php echo $product['vendorId']; ?>"><?php echo $product['vendorName'] ?></a></b><br>
             <?php echo $product['description'];?>
             </p>
 
@@ -58,11 +58,10 @@
             <div id="myModal" class="modal">
                 <!-- Modal content -->
                 <div class="modal-content">
-                    <!-- <span class="close">&times;</span> -->
-                    <p>The same product is available at lower price</p>
+                    <p>The same product is available at lower price</p><?php echo $allProduct['productName'].'   Rs.'.$allProduct['price'];?>
                     <span><button type="button" class="no" data-dismiss="modal">Close</button></span>
+                    <span><a href="shippingBilling?pId=<?php echo $product['productId']; ?>">Move Forward</a></span>
                 </div>
-
             </div>
 
 
