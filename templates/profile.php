@@ -7,6 +7,7 @@
 ?>
 
 <section>
+    <a href="signOut"><button class="float-right mr-5">Sign Out</button></a>
     <h1 class="text-center mt-4 font-italic">My Orders</h1>
     <center>
     <table class="table table-hover mt-3 text-center">

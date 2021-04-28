@@ -20,7 +20,7 @@
 
     <!-- adding add to cartlogo to header -->
     <img src="svg/cart.svg" class="cart-svg">(0)
-    <a href="signOut"><button type="button" class="float-right sign-in-up mt-4">Sign Out</button></a>
+    <a href="profile"><button type="button" class="float-right sign-in-up mt-4">Profile</button></a>
 
     <!-- navigation bar -->
     <!-- available from : https://getbootstrap.com/docs/4.0/components/navbar/ -->

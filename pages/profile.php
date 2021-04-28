@@ -1,6 +1,7 @@
 <?php
     session_start();
     if (isset($_SESSION['sessCustomerId'])) {
+        
         $categories = $category->findAll();
 
         $orders = $productorder->joinTableCondition('product', 'productId', 'productId', 'customerId', $_SESSION['sessCustomerId']);

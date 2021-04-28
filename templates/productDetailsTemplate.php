@@ -27,7 +27,6 @@
             </p>
 
             <p><b class="mr-5">Rs. <?php echo $product['price'];?></b>
-            Quantity<input type="number" name="quantity" value="1"  min="1" class="ml-3 quantity-input">
             </p>
             <br>
             <?php
@@ -42,11 +41,7 @@
                         }
                     }
                 }
-                if($status == true){
-                    echo "Available ";
-                }
-                else
-                    echo "Not Available ";
+
                 
             ?>
             <a href="shippingBilling?pId=<?php echo $product['productId']; ?>"></a>
