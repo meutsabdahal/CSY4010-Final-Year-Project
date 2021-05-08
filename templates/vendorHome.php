@@ -1,7 +1,5 @@
 <?php
     include 'vendorHeader.php';
-
-    echo $_SESSION['sessVendorId'];
 ?>
 
 

@@ -1,4 +1,5 @@
 <?php
+    // adding admin's layout
 	require 'adminLayout.php';
 ?>
 
@@ -6,6 +7,7 @@
 <h1 class="text-center mt-1 font-italic">Product</h1>
 <table class="table  table-hover">
     <thead>
+        <!-- giving title to table -->
         <tr>
             <th scope="col">Product Name</th>
             <th scope="col">Price</th>
@@ -16,6 +18,7 @@
     </thead>
     <tbody>
     <tbody>
+        <!-- displaying data in table -->
         <?php
         foreach ($products as $product){
                 ?>

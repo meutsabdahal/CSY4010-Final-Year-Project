@@ -1,5 +1,5 @@
 <?php
-    // function to get url
+    // calling function to get url
     function getURL($parameters = null){
         return "http://localhost/CSY4010-Final-Year-Project/" . $parameters;
     }
@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- title of the page and link to css and bootstrap cdn links -->
     <title><?php echo $title; ?></title>
     <link rel="stylesheet" type="text/css" href="<?php echo getURL('css/style.css'); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo getURL('css/admin.css'); ?>">
@@ -20,8 +21,9 @@
 </head>
 
 <body>
-    
+
     <section>
+        <!-- contents of the page -->
         <div>
             <?php echo $content; ?>
         </div>

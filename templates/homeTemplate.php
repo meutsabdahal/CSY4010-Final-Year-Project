@@ -1,13 +1,16 @@
 <?php
+    // displaying loggedin header when customer is loggedin
     if (isset($_SESSION['sessCustomerId'])) {
         include 'loggedInHeader.php';
     }
+    // displaying header when customer is not logged in
     else
         include 'header.php';
 ?>
 
 
 <section>
+    <!-- slideshow of images -->
     <div id="carouselExampleIndicators" class="carousel slide mt-2 " data-ride="carousel">
         <ol class="carousel-indicators ">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -32,7 +35,7 @@
                 ?>
             
         </div>
-
+        <!-- controls for slideshows -->
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="" aria-hidden="true"><img role="img" src="svg/previous.svg"></span>
             <span class="sr-only">Previous</span>
@@ -44,8 +47,8 @@
         </center>
     </div>
 
-    <h4 class="mt-4 ml-5 font-italic">Top Deals</h4>
-
+    <h4 class="mt-4 ml-5 font-italic">Our Products</h4>
+    <!-- creating container to display product details -->
     <div class="container-product">
         <div class="row">
             

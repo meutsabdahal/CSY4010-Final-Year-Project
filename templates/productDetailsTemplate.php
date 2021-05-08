@@ -1,12 +1,15 @@
 <?php
+    // dislaying loggedin header when customer is loggedin
     if (isset($_SESSION['sessCustomerId'])) {
         include 'loggedInHeader.php';
     }
+    // displaying header when customer is not loggedin
     else
         include 'header.php';
 ?>
 
 <section>
+    <!-- displaying product details -->
     <div class="product-details">
         <div class="ml-5 mt-4 w-50 text-center float-left product-description">
         <?php
@@ -49,9 +52,9 @@
 
             <!-- Available from: -->
             <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal -->
-            
+                
             <div id="myModal" class="modal">
-                <!-- Modal content -->
+
                 <div class="modal-content">
                     <p>The same product is available at lower price</p><?php echo $allProduct['productName'].'   Rs.'.$allProduct['price'];?>
                     <span><button type="button" class="no" data-dismiss="modal">Close</button></span>
@@ -59,7 +62,7 @@
                 </div>
             </div>
 
-
+            
             <form action="" method="post">
             <input type="hidden" name="cartId">
             <input type="hidden" name="productId" value="<?php echo $product['productId']; ?>">

@@ -1,4 +1,5 @@
 <?php
+    // adding header
     require 'header.php';
 
 ?>

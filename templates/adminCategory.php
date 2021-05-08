@@ -1,18 +1,22 @@
 <?php
+    // adding admin's layout
 	require 'adminLayout.php';
 ?>
 
 
 <h1 class="text-center mt-1 font-italic">Category</h1>
+<!-- adding button to page -->
 <a href="manageCategory"><button class="ml-5 mb-4 adminButton">Add Category</button></a>
 <table class="table  table-hover">
     <thead>
+        <!-- giving title to table -->
         <tr>
             <th scope="col">Category Name</th>
             <th scope="col">Handle</th>
         </tr>
     </thead>
     <tbody>
+        <!-- dispalying data -->
             <?php
             foreach ($categories as $category){
                 ?>

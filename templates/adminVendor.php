@@ -1,12 +1,15 @@
 <?php
+    // adding admin's layout
 	require 'adminLayout.php';
 ?>
 
 
 <h1 class="text-center mt-1 font-italic">Vendors</h1>
+<!-- adding button -->
 <a href="pendingVendor"><button class="ml-5 mb-4 adminButton float-right">Pending vendors</button></a>
 <table class="table  table-hover">
     <thead>
+        <!-- giving title to table -->
         <tr>
             <th scope="col">Vendor Name</th>
             <th scope="col">Email</th>
@@ -16,6 +19,7 @@
         </tr>
     </thead>
     <tbody>
+        <!-- displaying data in table -->
          <?php
             foreach ($vendors as $vendor){
                 ?>

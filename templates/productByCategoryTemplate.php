@@ -1,10 +1,12 @@
 <?php
+    // adding header
     require 'header.php';
 
 ?>
 
 
 <section>
+    <!-- displaying product details according to their category -->
     <?php
         foreach ($products as $product) {
             ?>

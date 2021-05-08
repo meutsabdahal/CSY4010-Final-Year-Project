@@ -1,20 +1,22 @@
 <?php
+    // displaying loggedin header when customer is loggedin
     if (isset($_SESSION['sessCustomerId'])) {
         include 'loggedInHeader.php';
     }
+    // displaying header when customer is not logged in
     else
         include 'header.php';
 ?>
 
 <section>
-  
+    <!-- displaying details of customer -->
     <div class="ml-5 mt-3 w-50  product-description">
         <h4 class="font-italic"><?php echo $vendors['vendorName']; ?></h4>
         <br>
         <?php echo $vendors['aboutCompany']; ?>
             
     </div>
-    
+    <!-- displaying reviews of the vendor's product -->
     <h3 class="ml-5 mt-4 font-italic">Reviews of Vendor Name's Products</h3>
     <?php
         foreach ($reviews as $review) {

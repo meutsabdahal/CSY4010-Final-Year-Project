@@ -14,6 +14,7 @@
             }
         }
 
+        // function to extract all the data from table
         function findAll(){
             global $pdo;
             $stmt = $pdo->prepare("SELECT * FROM $this->table");
@@ -21,6 +22,7 @@
             return $stmt;
         }
         
+        // function declaration to extract all the data from table with condition
         function find($field, $value){
             global $pdo;
             $stmt = $pdo->prepare("SELECT * FROM $this->table WHERE $field =:value");
@@ -31,6 +33,7 @@
             return $stmt;
         }
 
+        // function declaration to extract all the data from table with two conditions
         function findValue($field, $value, $field2, $value2){
             global $pdo;
             $stmt = $pdo->prepare("SELECT * FROM $this->table WHERE $field =:value AND $field2 =:value2");
@@ -42,6 +45,7 @@
             return $stmt;
         }
 
+        // function declaration to insert data to table
         function insert($record){
             global $pdo;
             $keys = array_keys($record);
@@ -52,6 +56,7 @@
             
         }
 
+        // function declaration to update data from table
         function update($record, $pk){
             global $pdo;
             $para = [];
@@ -68,6 +73,7 @@
                 return false;
         }
 
+        // function declarartion to delete a row from table
         function delete($field, $value){
             global $pdo;
             $stmt = $pdo->prepare("DELETE FROM $this->table WHERE $field = :value");
@@ -78,6 +84,7 @@
             return $stmt;
         }
 
+        // function declaration to count the number of rows in table
         function countRow(){
             global $pdo;
             $stmt = $pdo->prepare("SELECT COUNT(*) FROM $this->table");
@@ -85,6 +92,7 @@
             return $stmt;
         }
 
+        // function declaration to update specific row column data 
         function updateStatus($field, $field2, $value2){
             global $pdo;
             $stmt = $pdo->prepare("UPDATE $this->table SET $field = 1 WHERE $field2 = :value2");
@@ -95,6 +103,7 @@
             return $stmt;
         }
 
+        // function declaration to update specific row column data 
         function updateValues($field, $val, $field2, $value2){
             global $pdo;
             $stmt = $pdo->prepare("UPDATE $this->table SET $field = $val WHERE $field2 = :value2");
@@ -105,6 +114,7 @@
             return $stmt;
         }
 
+        // function declaration to find data through search
         function findProducts($field, $value){
             global $pdo;
             $stmt = $pdo->prepare("SELECT * FROM $this->table WHERE $field LIKE :value");
@@ -115,6 +125,7 @@
             return $stmt;
         }
 
+        // function declaration to join two tables with condition
         function joinTableCondition($table2,$value,$value2,$field,$value3){
             global $pdo;
             $stmt = $pdo->prepare("SELECT $this->table.*, $table2.* FROM $this->table JOIN $table2 ON 
@@ -126,6 +137,7 @@
             return $stmt;
         }
 
+        // function declaration to join two tables
         function joinTable($table2,$value,$value2){
             global $pdo;
             $stmt = $pdo->prepare("SELECT $this->table.*, $table2.* FROM $this->table JOIN $table2 ON 
@@ -134,7 +146,7 @@
             return $stmt;
         }
 
-        
+        // function declaration to join three tables
         function joinThreeTable($table2,$value, $value2, $table3, $value3 , $value4){
             global $pdo;
             $stmt = $pdo->prepare("SELECT $this->table.*, $table2.*, $table3.* FROM $this->table JOIN $table2 ON 

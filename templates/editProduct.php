@@ -1,11 +1,12 @@
 <?php
+    // displaying vendor's header
 	require 'vendorHeader.php';
 ?>
 
 <section>
     <h1 class="text-center mt-1 font-italic">Manage Products</h1>
     <center>
-
+    <!-- form to edit product -->
     <form action="" method="post" enctype="multipart/form-data" class="mt-3">
         <input type="hidden" name="productId" value="<?php echo $products['productId'];?>">
         

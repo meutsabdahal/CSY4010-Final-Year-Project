@@ -1,11 +1,12 @@
 <?php
+    // adding admin's layout
 	require 'adminLayout.php';
 ?>
 
 
 <h1 class="text-center mt-1 font-italic">Manage Category</h1>
 <center>
-
+<!-- form to manage category -->
 <form action="" method="post" class="mt-3">
     <input type="hidden" name="category[categoryId]" value="<?php if(isset($category['categoryId'])) echo $category['categoryId'];?>" >
 

@@ -1,7 +1,9 @@
 <?php
+    // starting session and checking vendor's login
     session_start();
     if (isset($_SESSION['sessVendorId'])) {
 
+        // inserting data and images to product table
         if (isset($_POST['submit'])) {
             unset($_POST['submit']);
             
@@ -18,11 +20,17 @@
             header('Location:vendorHome');
         
         }
+
+        // calling function to extarct all the data from category table
         $categories = $category->findAll();
+
+        // giving title to the page
         $title = "MeKart";
 
+        // calling function for displaying contents on the page
         $content = loadTemplate("templates/manageProduct.php", ['categories' => $categories]);
     }
+    // when vendor is not loggedin displing vendor's login page
     else
         include 'vendorLogIn.php';
 

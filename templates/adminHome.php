@@ -1,10 +1,12 @@
 <?php
+    // adding admin's layout
 	require 'adminLayout.php';
 ?>
 
 <section>
 
 <h1 class="text-center mt-1 font-italic">Dashboard</h1>
+<!-- creating container and displaying number of rows in a table -->
 <div class="container-product">
     <div class="row">
         <a href="category">

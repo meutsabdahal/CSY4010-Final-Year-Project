@@ -1,12 +1,15 @@
 <?php
+    // displaying loggedin header when customer is loggedin
     if (isset($_SESSION['sessCustomerId'])) {
         include 'loggedInHeader.php';
     }
+    // displaying header when customer is not loggedin
     else
         include 'header.php';
 ?>
 
 <section>
+    <!-- displaying product details -->
     <div class="cart-listing mt-2 ml-5">
 
         <img src="productImages/<?php echo $products['thumnailImage'];?>" class="product-view-img ml-3 cart-product-img">
@@ -14,7 +17,7 @@
         <p class="mt-4 mr-5 float-right">Rs. <?php echo $products['price'];?></p>
     </div>    
     <h3 class="text-center mt-4 font-italic">Shipping and Billing</h3>
-
+    <!-- form for product order details -->
     <center>
     <div class="login-container shadow bg-white mt-1">
         <form action="" method="post">

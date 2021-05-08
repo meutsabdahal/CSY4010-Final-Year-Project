@@ -2,7 +2,7 @@
     <!-- div for  -->
     <div class = "top ">
         <a href="vendorLogIn" class="text-dark mr-2">Sell on MeKart</a>
-        <a href="" class="text-dark">Track Order</a>
+        <a href="profile" class="text-dark">Track Order</a>
         <a href="" class="text-dark ml-3">SignIn</a>
     </div>
 
@@ -16,7 +16,7 @@
     </div> 
 
     <!-- adding logo to header -->
-    <img src="img/logo.png" class="logo-img">
+    <a href="home"><img src="img/logo.png" class="logo-img"></a>
 
     <!-- adding add to cartlogo to header -->
     <img src="svg/cart.svg" class="cart-svg">(0)

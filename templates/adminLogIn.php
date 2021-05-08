@@ -1,7 +1,7 @@
 <h1 class="text-center mt-3 font-italic">Log In To Your Account</h1>
 
 <center>
-
+<!-- admin's login form -->
 <form action="" method="post">
     <label class="font-italic login-register-label">Email Address</label><br>
     <input type="text" name="email"><br>

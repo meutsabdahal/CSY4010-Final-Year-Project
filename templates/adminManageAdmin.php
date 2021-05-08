@@ -1,11 +1,12 @@
 <?php
+    // adding admin's layout
 	require 'adminLayout.php';
 ?>
 
 
 <h1 class="text-center mt-1 font-italic">Manage Admin</h1>
 <center>
-
+<!-- form to manage admin -->
 <form action="" method="post" class="mt-3">
     <input type="hidden" name="admin[adminId]">
     

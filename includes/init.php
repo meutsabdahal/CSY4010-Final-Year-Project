@@ -1,11 +1,11 @@
 <?php
 
-	// function to get baseurl
+	// function declaration to get baseurl
 	function baseURL($url){
 		return $_SERVER['DOCUMENT_ROOT'].'/CSY4010-Final-Year-Project/'.$url;
 	}
 
-	require baseURL('db/connect.php');
+	require baseURL('db/databaseConnect.php');
 	require baseURL('classes/databasetable.php');
 	
 	// creating objects for the class tables

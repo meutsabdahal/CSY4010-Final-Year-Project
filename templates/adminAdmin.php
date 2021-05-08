@@ -1,12 +1,15 @@
 <?php
+    // adding admin's layout
 	require 'adminLayout.php';
 ?>
 
 
 <h1 class="text-center mt-1 font-italic">Admins</h1>
+<!-- adding button to page -->
 <a href="manageAdmin"><button class="ml-5 mb-4 adminButton">Add Admin</button></a>
 <table class="table  table-hover">
     <thead>
+        <!-- giving title to table -->
         <tr>
             <th scope="col">First Name</th>
             <th scope="col">Last Name</th>
@@ -16,6 +19,7 @@
         </tr>
     </thead>
     <tbody>
+        <!-- dispalying data -->
          <?php
             foreach ($admins as $admin){
                 ?>

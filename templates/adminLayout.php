@@ -1,8 +1,10 @@
 <header class="text-center adminHeader">
     MeKart
 
+    <!-- adding button to the header -->
     <a href="logOut"><button class="float-right adminButton">Sign Out</button></a>
 </header>
+<!-- creating admin's navgation -->
 <div class="adminNav mt-1 float-left">
     <nav>
         <ul>

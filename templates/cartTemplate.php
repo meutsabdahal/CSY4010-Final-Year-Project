@@ -1,13 +1,15 @@
 <?php
+    // displaying loggedin header when customer is loggedin
     if (isset($_SESSION['sessCustomerId'])) {
         include 'loggedInHeader.php';
     }
+    // displying header when customer is not loggedin
     else
         include 'header.php';
 ?>
 
 <section>
-
+    <!-- displaying product details by creating div -->
     <div class="cart-listing mt-2 ml-5">
         <?php
             foreach ($carts as $cart) {
@@ -23,6 +25,7 @@
         ?>
     </div>
 
+    <!-- displaying details of product added to cart -->
     <center>
         <div class="order-summary text-center mt-4">
             <h4 class="font-italic">Summary</h4>
